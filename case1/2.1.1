@@ -10,7 +10,7 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/*
 
 
-RUN wget http://snapshot.debian.org/archive/debian/20130101T091755Z/pool/main/b/bash/bash_4.2%Bdfsg-0.1_amd64.deb -O /tmp/bash_4.2_amd64.deb && \
+RUN wget http://snapshot.debian.org/archive/debian/20130101T091755Z/pool/main/b/bash/bash_4.2%2Bdfsg-0.1_amd64.deb -O /tmp/bash_4.2_amd64.deb && \
     dpkg -i /tmp/bash_4.2_amd64.deb
 
 COPY vulnerable /usr/lib/cgi-bin
