@@ -19,6 +19,7 @@ metadata:
 spec:
   selector:
     app: sample-web
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 80
