@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-web
+  labels: 
+    app: sample-web
+spec:
+  containers:
+  - name: web
+    image: nasubi3/sample-web@sha256:8402592be1510f90cda153e92fdbcb623487ed4f680264dbc3702b477d15b767
+    imagePullPolicy: Always
