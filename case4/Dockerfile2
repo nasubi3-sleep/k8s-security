@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 COPY PASSWORD ./PASSWORD
 
-RUN echo Use credentisl: $(cat ./PASSWORD)
+RUN echo Use credential: $(cat ./PASSWORD)
 
 RUN rm ./PASSWORD
 
