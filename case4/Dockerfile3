@@ -9,3 +9,11 @@ RUN touch file_b
 RUN rm file_a
 
 CMD ["/bin/bash", "-c", "while :; do sleep 10; done"]
+
+
+for layer in $(cat sample-image/manifest.json | jq -c '.[0].Layers[]' | sed s/\"//g); 
+do
+    layer_dir=sample-image/blobs/sha256/layer-$(eval echo ${layer} | awk '{sub("blobs/sha256/", "");print $0;}') ;
+    mkdir ${layer_dir} ;
+    tar xvf sample-image/${layer} -C ${layer_dir}  ; 
+done
