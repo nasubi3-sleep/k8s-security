@@ -1,0 +1,11 @@
+FROM ubuntu:22.04
+
+RUN touch file_a
+
+RUN echo "test" > file_a
+
+RUN touch file_b
+
+RUN rm file_a
+
+CMD ["/bin/bash", "-c", "while :; do sleep 10; done"]
