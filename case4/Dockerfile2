@@ -1,0 +1,9 @@
+FROM ubuntu:22.04
+
+COPY PASSWORD ./PASSWORD
+
+RUN echo Use credentisl: $(cat ./PASSWORD)
+
+RUN rm ./PASSWORD
+
+CMD ["/bin/bash", "-c", "while :; do sleep 10; done"]
