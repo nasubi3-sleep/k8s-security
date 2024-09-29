@@ -8,4 +8,4 @@ spec:
   containers:
   - name: run-as-user-default-1000
     image: nasubi3/ubuntu-user-1000:22.04
-    command: ["/bin/sh", "-c", "while:; do echo run-as-user-default-1000; sleep 10; done"]
+    command: ["/bin/sh", "-c", "while :; do echo run-as-user-default-1000; sleep 10; done"]
