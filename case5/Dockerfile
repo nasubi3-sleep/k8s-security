@@ -1,4 +1,4 @@
-FROM httpd:2.4.57-alpine
+FROM ubuntu:22.04
 
 RUN useradd -m -U -u 1000 user01
 
